@@ -17,7 +17,25 @@ def generate_secret(low, high):
 
 def get_guess():
     """ get user's guess, as an integer number """
-    return int(input('Guess the secret number? '))
+   # return int(input('Guess the secret number? '))
+    number = 0
+    while True:
+        try:
+            number = int(input('Please enter an integer number. You have as many tries as you need to enter a number: '))
+            # if the user enters a number, it will be stored in the variable
+            # number and your program can use it.
+            print(f'Thank you for entering the number {number}')
+            break   # we have a number, no need to repeat the loop
+        except ValueError:
+            # if the user doesn't enter a number, the line with int() in raises
+            # A ValueError exception and then this block of code will run.
+            print('That was not an integer number. Try again.')
+            # since we are in a while True loop, the loop will repeat and ask the user for input again.
+
+
+    print(f'The number you entered was {number}')  # What value does this have? Are we guaranteed to have a value?
+
+    return number
 
 
 def check_guess(guess, secret):
