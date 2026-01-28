@@ -63,7 +63,7 @@ def main():
             break
 
 
-    print(f'Thanks for playing the game! You guessed {counter} time(s)!')
+    print(f'You guessed {counter} time(s)! Thanks for playing the seceret number game!')
 
 
 if __name__ == '__main__':
